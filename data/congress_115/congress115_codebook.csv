@@ -1,0 +1,21 @@
+column_name,explanation
+id_str,"Unique tweet id in string format. When loading into code, ensure that this column is being read as a string datatype to ensure that code does not unintentionally round last digits of tweet id. In the event of rounding, this tweet id is no longer unique."
+full_text,Full tweet text associated with unique tweet id.
+text_tokenized,Tweet text cleaned and tokenized into a list of words for training and testing of unsupervised topic models.
+created_at,Twitter timestamp of when tweet was created.
+retweet_count,Number of times that tweet has been retweeted by other users.
+user_id,Twitter user id of the account that authored and posted the tweet.
+screen_name,Twitter user screen name of the account that authored and posted the tweet.
+name,Name of Congressional Member associated with the account that authored and posted the tweet.
+followers_count,Number of followers associated with the account that authored and posted the tweet at the time of data collection.
+bioguide,Bioguide id associated with Congressional Member associated with the account that authored and posted the tweet.
+birthday,Birthday of the Congressional Member associated with the account that authored and posted the tweet.
+chamber,Congressional chamber associated with Congressional Member associated with the account that authored and posted the tweet. Values include 'rep' (House of Representatives) and 'sen' (Senate).
+party,"Political party associated with Congressional Member associated with the account that authored and posted the tweet. Values include 'Democrat' (Democratic Party), 'Republican' (Republican Party), 'Independent' (unaffiliated with political party)."
+gender,Gender identity of Congressional Member associated with the account that authored and posted the tweet at the time of data collection. Values include 'M' (man) and 'F' (woman).
+state,U.S. state two-letter abbreviation represented by Congressional Member associated with the account that authored and posted the tweet.
+policy_area_lr,"Supervised model policy code assignment. Policy codes correspond to the Comparative Agenda's Policy codebook (https://www.comparativeagendas.net/pages/master-codebook), with '0' representing a tweet that is not policy-related."
+max_topic,"Unsupervised model policy code assigned with highest probability. Policy codes '1'-'21' correspond to the Comparative Agenda's Policy codebook (https://www.comparativeagendas.net/pages/master-codebook), with '0' representing a tweet that is not policy-related. Policy codes '24'-'35' represent topic areas detected through manual labeling, corresponding to the following topics: '24'=veterans, '25'=sports, '26'=district affairs, '27'=holidays, '28'=awards, '29'=politicking, '30'=self promotion, '31'=sympathy, '32'=emergency response, '33'=legislative process, '34'=constituent relations, and '35'=power relations."
+max_topic_2,"Unsupervised model policy code assigned with second highest probability. Policy codes '1'-'21' correspond to the Comparative Agenda's Policy codebook (https://www.comparativeagendas.net/pages/master-codebook), with '0' representing a tweet that is not policy-related. Policy codes '24'-'35' represent topic areas detected through manual labeling, corresponding to the following topics: '24'=veterans, '25'=sports, '26'=district affairs, '27'=holidays, '28'=awards, '29'=politicking, '30'=self promotion, '31'=sympathy, '32'=emergency response, '33'=legislative process, '34'=constituent relations, and '35'=power relations."
+,
+"** Null values are represented by the phrase, ""NaN"". These null values occur in columns ""name"", ""bioguide"", ""birthday"", ""chamber"", ""party"", ""gender"", and ""state"" because our Congressional metadata resources (United States Project: https://github.com/unitedstates/congresslegislators, and Sunlight Foundation: https://sunlightlabs.github.io/congress/index.html\#legislator-spreadsheet) did not include these members' social media accounts. ",
